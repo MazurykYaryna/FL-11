@@ -1,0 +1,141 @@
+%logo {
+	display: flex;
+	img {
+		margin-right: 5px;
+	}
+	p  {
+		font-weight: 600;
+	}
+}
+@mixin button {
+	background: $buttonColor;
+	border: none;
+	color: #ffffff;
+	padding: 10px 25px;
+	cursor: pointer;
+	font-weight: 600;
+	&:hover {
+		background:  darken($buttonColor,10%);
+	}
+}
+
+//general style
+body {
+	background-color: $backgroundColorMain;
+}
+p, button {
+	font-family: $paragraphFont;
+	font-size: 14px;
+}
+
+//style for header section
+.header {
+	border-bottom-right-radius: 255px;
+	background-image: url($backgroundImage);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.header-wrap {
+	padding: 10px 100px 100px 100px;
+	color: $titleColor;
+	.landing-logo {
+		@extend %logo;
+	}
+	.header_heading {
+		font-family: $titleFont;
+		font-size: 74px;
+		line-height: 65px;
+		font-weight: 600;
+	}
+	.header_text {
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 74px;
+	}
+	.header_button {
+		@include button;
+	}
+}
+//style for main section
+.section {
+	background-color: $backgroundColorMain;
+	.section_text {
+		font-family: $titleFont;
+		font-size: 30px;
+		font-weight: 600;
+		text-align: center;
+		color: $titleColor;
+	}
+	.section_card_wrap {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 100px;
+	}
+	.section_card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+		padding: 10px;
+		border-radius: 5px;
+		background: $blocksColor;
+		color: #ffffff;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	.section_card_heading {
+		font-weight: 600;
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+	//style for banner
+	.section_banner {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+		bottom: -70px;
+		width: 50%;
+		padding: 20px 70px;
+		background-image: linear-gradient(to right, $colorGradientOne , $colorGradientTwo);
+		border-radius: 5px;
+		margin: 0 auto;
+	}
+	.section_banner_heading {
+		font-family: $titleFont;
+		font-size: 24px;
+		font-weight: 600;
+		color: $titleColor;
+	}
+	.section_banner_text {
+		color: #ffffff;
+	}
+	.section_banner_button {
+		@include button;
+	}
+
+}
+//style for footer section
+.footer {
+	background-color: $blocksColor;
+	.footer-cr {
+		display: block;
+	}
+}
+.footer-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 100px 30px 100px;
+	color: #ffffff;
+
+	.footer_logo, .footer_text, .footer-cr  {
+		width: 30%;
+	}
+	.footer_logo {
+		@extend %logo;
+	}
+}
