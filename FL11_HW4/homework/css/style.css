@@ -1,0 +1,52 @@
+*  {
+
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../img/sample2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: #FFFFFF;
+    padding: 30px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+nav .logo {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+nav .entrance {
+    list-style: none;
+}
+nav .entrance li:first-child {
+    margin-right: 10px;
+}
+nav .entrance li {
+    display: inline-block;
+}
+.headerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.headerTitle h2 {
+    text-transform: uppercase;
+}
+.headerButtons {
+    display: flex;
+    justify-content: space-around;
+}
+.headerButtons button {
+    background: black;
+    opacity: 0.7;
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+}
