@@ -1,0 +1,149 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+}
+
+body {
+  font-family: roboto;
+  background: #0b192f;
+  box-sizing: border-box;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/*style header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background: #162b4d;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+header .logo {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 300;
+}
+header .logo span {
+    color: #B71757;
+}
+.nav {
+    list-style: none;
+}
+.nav li {
+    display: inline-block;
+}
+.nav li:not(:last-child) {
+    margin-right: 10px;
+}
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+/*style main*/
+main {
+    display: flex;
+}
+main .article-column:first-child {
+    width: 70%;
+    margin-right: 20px;
+}
+main .article-column:last-child {
+    width: 30%;
+}
+
+
+.article-column {
+    margin-top: 10px;
+}
+.post {
+    display: flex;
+    color: white;
+    align-items: center;
+    position: relative;
+}
+.post div {
+    width: 50%;
+}
+.post-background {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.post-description {
+    padding: 20px;
+}
+.post-description h1 {
+    font-weight: 200;
+    font-size: 35px;
+}
+.date {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    text-align: center;
+}
+.post-date {
+    font-size: 36px;
+    font-weight: 200;
+    opacity: 0.7;
+}
+.post-month {
+    display: block;
+    font-size: 14px;
+    opacity: 0.7;
+}
+.post:nth-child(odd) .post-description {
+    text-align: left;
+    padding-right: 40px;
+}
+.post:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.post:nth-child(even) .date {
+    left: 10px;
+    right: initial;
+}
+.post:nth-child(even) .post-description {
+    text-align: right;
+    padding-left: 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .wrapper {
+        width: 800px;
+    }
+}
