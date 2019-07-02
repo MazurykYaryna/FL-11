@@ -1,14 +1,3 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
-}
 
 body {
   font-family: roboto;
@@ -38,6 +27,7 @@ body {
 p {
     font-weight: 300;
     font-size: 14px;
+    opacity: 0.6;
 }
 
 /*style header*/
@@ -45,18 +35,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    padding: 10px 30px 10px 50px;
     background: #162b4d;
-    padding-left: 30px;
-    padding-right: 50px;
 }
 header .logo {
     font-size: 24px;
     color: #fff;
     font-weight: 300;
+    opacity: 1;
 }
 header .logo span {
     color: #B71757;
+}
+.burger-menu {
+    display: none;
 }
 .nav {
     list-style: none;
@@ -84,27 +76,34 @@ main .article-column:first-child {
 main .article-column:last-child {
     width: 30%;
 }
-
-
 .article-column {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .post {
     display: flex;
     color: white;
     align-items: center;
     position: relative;
+    width: 100%;
+    height: 300px;
 }
 .post div {
+    height: 100%;
     width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
 }
 .post-background {
-    height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.post-description {
-    padding: 20px;
+.post-background:hover, .post-description:hover {
+    background-color: #B71757;
+    opacity: 0.6;
+    cursor: pointer ;
+}
+.post-text {
+    line-height: 22px;
 }
 .post-description h1 {
     font-weight: 200;
@@ -119,16 +118,14 @@ main .article-column:last-child {
 .post-date {
     font-size: 36px;
     font-weight: 200;
-    opacity: 0.7;
 }
 .post-month {
     display: block;
     font-size: 14px;
-    opacity: 0.7;
 }
 .post:nth-child(odd) .post-description {
     text-align: left;
-    padding-right: 40px;
+    /*padding-right: 40px;*/
 }
 .post:nth-child(even) {
     flex-direction: row-reverse;
@@ -141,9 +138,114 @@ main .article-column:last-child {
     text-align: right;
     padding-left: 40px;
 }
+.last-post {
+    height: initial;
+}
+.last-post .post-description {
+    width: 100%;
+}
+.article-item {
+    background: #ffffff;
+    padding-bottom: 20px;
+}
+.article-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.article-img {
+    width: 100%;
+}
+.article-text {
+    padding: 0 20px;
+    line-height: 22px;
+}
+.article-text h2 {
+    font-weight: 200;
+}
+
+/*style footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    background: #162b4d;
+    padding: 20px;
+    color: #fff;
+    margin-top: 20px;
+    line-height: 22px;
+}
+footer p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 
 @media only screen and (max-width: 1400px) {
     .wrapper {
-        width: 800px;
+        width: 900px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }
+    header {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+    .burger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+    }
+    .nav {
+        display: none;
+    }
+    .post {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .post div {
+        height: 340px;
+        width: 100%;
+    }
+    .post-description {
+        padding-bottom: 90px;
+    }
+    .post:nth-child(odd) .post-description {
+        text-align: initial;
+    }
+    .post:nth-child(even) .post-description {
+        text-align: initial;
+    }
+    .date, .post:nth-child(even) .date{
+        top: initial;
+        right: 50%;
+        bottom: 5px;
+    }
+    .post:nth-child(even) .date {
+        left: initial;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer p {
+        margin-top: 0;
+    }
+}
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+    main .article-column:first-child {
+        width: 100%;
+        margin-right: 0;
+    }
+    main .article-column:last-child {
+        width: 100%;
     }
 }
