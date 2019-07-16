@@ -65,7 +65,8 @@ const mapArray = (array, callback) => {
 };
 mapArray([1, 2, 3],
     function (el) {
-    return el + 3 } );
+    return el + 3
+    } );
 
 const filterArray = (array, callback) => {
     let filterArray = [];
@@ -156,7 +157,8 @@ const getAmountOfAdultPeople = (users) => {
         ageOfUsers.push(yearDiff);
     }
     let adults = filterArray(ageOfUsers, function (el) {
-        return el > 18 } );
+        return el > 18
+    });
     return adults.length;
 };
 getAmountOfAdultPeople(data);
