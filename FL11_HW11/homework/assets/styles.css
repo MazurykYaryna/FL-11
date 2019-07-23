@@ -1,0 +1,75 @@
+body {
+    box-sizing: border-box;
+    color: rgb(70, 170, 168);
+}
+#root {
+    width: 1000px;
+    margin: 0 auto;
+}
+.list-title {
+    text-align: center;
+}
+.line {
+    height: 4px;
+    background:  rgb(70, 170, 168);
+    width: 100%;
+    margin: 10px 0;
+}
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-item {
+    display: flex;
+    width: 100%;
+}
+.add-item input {
+    padding: 10px;
+    width: 100%;
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: move;
+}
+.item .main-section {
+    display: flex;
+    align-items: center;
+}
+.main-section .completed {
+    height: 25px;
+    width: 25px;
+    border: 1px solid rgb(154, 165, 177);
+    margin-right: 10px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.material-icons {
+    cursor: pointer;
+    color: rgb(154, 165, 177);
+}
+.material-icons.add {
+    margin-left: 10px;
+    height: 30px;
+    font-size: 35px;
+}
+.material-icons.edit {
+    margin-left: 10px;
+}
+.material-icons.not-active {
+    cursor: default;
+    pointer-events: none;
+}
+.list-item {
+    width: 100%;
+}
+.edit-section {
+    display: flex;
+}
+
+
+
+
