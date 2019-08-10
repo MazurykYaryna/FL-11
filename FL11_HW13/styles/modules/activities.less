@@ -1,0 +1,39 @@
+.activities_container {
+    .activities-card {
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+        border: 1px solid;
+    }
+    .activities-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 100%;
+        min-width: 100%;
+        z-index: 100;
+    }
+    .activities-description {
+        position: absolute;
+        z-index: 200;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 10px 5px;
+        text-align: center;
+        color: @white;
+    }
+    .activities-color {
+            each(@colors, {
+              &-@{key} {
+                  border-color: @value;
+                .activities-description {
+                    background-color: @value;
+                }
+            }
+        });
+    }
+}
+
+  

@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6 {
+    color: @blue;
+    font-weight: 600 !important;
+}
+.underline {
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid @blue;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
