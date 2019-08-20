@@ -42,7 +42,6 @@ class Hamburger {
         
         if (biteCounter == 0) { 
             if (tomatoCounter === 0 && cheeseCounter === 0) {
-                console.log(tomatoCounter, cheeseCounter);
                 if (Hamburger.secretIngredientCounter === 0) {
                     const addCalories = this.getCalories() + 100;
                     this.setCalories(addCalories);
